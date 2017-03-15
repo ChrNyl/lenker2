@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
+
+input:focus {
+    outline: none;
+}
+
+header {
+    z-index: 1000;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    height: 5em;
+    padding: 0 32px;
+    color: white;
+}
+
+header .logo {
+    left: 32px;
+    min-width: 100px;
+    font-size: 2em;
+    color: white;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+nav {
+    height: 100%;
+    margin-left: 32px;
+}
+
+nav a {
+    display: inline-block;
+    height: 100%;
+    line-height: 5em;
+    margin: 0 8px;
+    padding: 0 8px;
+    text-transform: uppercase;
+    transition: all 500ms;
+}
+
+header .search {
+    box-sizing: border-box;
+    position: absolute;
+    right: 32px;
+    width: 200px;
+    height: 100%;
+    border: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    background-color: #DA1A18;
+    border-right: 1px solid #2b2b2b;
+    border-left: 1px solid #2b2b2b;
+    padding: 0 16px;
+    color: white;
+    /*font-size: 14px;*/
+}
+
+.fa.fa-phone-square {
+    z-index: 5000;
+    margin-top: 16px;
+    font-size: 2em;
+    color: white;
+}
+
+.fa.fa-bars {
+  position: absolute;
+  left: 90%;
+  top: 20%;
+  color: white;
+  font-size: 3em;
+  visibility: hidden;
+}
+
+.fa.fa-bars:hover{
+  cursor: pointer;
+}
+
+#hamburger-img{
+  width: 50px;
+  height: 30px;
+}
+
+@media all and (max-width: 800px) {
+  #navigation {
+    display: none;
+  }
+  #searchValue{
+    display: none;
+  }
+  .fa.fa-bars {
+    visibility: visible;
+  }
+  .onclick-menu{
+    visibility: visible;
+  }
+
+}
+
+
+
+.onclick-menu {
+  visibility: hidden;
+  outline: none;
+}
+.onclick-menu:before {
+    margin-left: 250px;
+    outline: none;
+    border: none;
+}
+
+
+.onclick-menu:focus {
+    /* clicking on label should toggle the menu */
+    pointer-events: none;
+}
+.onclick-menu:focus .onclick-menu-content {
+    /*  opacity is 1 in opened state (see below) */
+    opacity: 1;
+    visibility: visible;
+
+    /* don't let pointer-events affect descendant elements */
+    pointer-events: auto;
+}
+.onclick-menu-content {
+    position: absolute;
+    z-index: 1;
+    left: 53%;
+    top: 80%;
+    /* use opacity to fake immediate toggle */
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+
+#navBox{
+  width: 42vw;
+  height: 120px;
+  background-color: black;
+  opacity: 0.7;
+  border-top: 2px solid red;
+}
+
+.mobile-link{
+  display: flex;
+  justify-content: center;
+  line-height: 30px;
+  margin: 5px;
+}
+
+@media all and (max-width: 500px) {
+  .onclick-menu-content {
+    left: 30%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #navigation {
+    display: none;
+  }
+  #searchValue{
+    display: none;
+  }
+  .fa.fa-bars {
+    visibility: visible;
+  }
+  .onclick-menu{
+    visibility: visible;
+  }
+
+}

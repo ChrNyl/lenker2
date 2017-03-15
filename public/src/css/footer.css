@@ -1,0 +1,44 @@
+
+.footercomp {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 40%;
+    margin: 0 auto;
+    border-bottom: solid 2px white;
+}
+
+#footer-logo {
+    width: 100%;
+    font-size: 30px;
+    float: left;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: 2%;
+    color: white;
+    font-size: 40px;
+}
+
+.footer-bottom {
+    width: 70%;
+    height: 60%;
+    margin: 0 auto;
+    color: white;
+}
+.footer-bottom h4 {
+    padding-top: 10px;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
